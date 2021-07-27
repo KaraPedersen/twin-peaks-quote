@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Loading from '../components/app/loading/Loading';
 import Quote from '../components/quote/Quote';
+import { fetchQuote } from '../services/twinPeaksApi';
 
 export default class TwinPeaksQuote extends Component {
   state = {
