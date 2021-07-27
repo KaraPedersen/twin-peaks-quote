@@ -1,8 +1,7 @@
-import { fetchAsyncQuestionPropertyQuestionProperty } from 'inquirer/lib/utils/utils';
 import React, { Component } from 'react';
 import Quote from '../components/quote/Quote';
 
-export defaulkt class TwinPeaksQuote extends Component {
+export default class TwinPeaksQuote extends Component {
   state = {
     loading: true,
     name: '',
@@ -24,12 +23,12 @@ export defaulkt class TwinPeaksQuote extends Component {
   render() {
     const { name, text, loading } = this.state;
 
-    if (loading) return <Loading />;
+    if(loading) return <Loading />;
 
     return (
       <>
-      <button onClick={this.getQuote}>Get More</button>
-      <Quote name={name} text={text} />
+        <button onClick={this.getQuote}>Get More</button>
+        <Quote name={name} text={text} />
       </>
     );
   }
